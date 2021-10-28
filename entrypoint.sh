@@ -23,6 +23,6 @@ git config --global user.email
 git remote set-url origin `https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git`
 git fetch
 git checkout ${branch}
-git add ${ibis_path}/export/
+git add export/
 git commit -m "${commit_message}"
 git push origin ${branch}
