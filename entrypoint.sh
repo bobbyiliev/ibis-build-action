@@ -13,13 +13,13 @@ commit_message=${COMMIT_MESSAGE:-Updated Ibis Exorted Files}
 
 # build the PDF
 cd ${ibis_path}
-ibis build
-ibis build dark
-ibis sample
-ibis sample dark
+/tmp/vendor/bin/ibis build
+/tmp/vendor/bin/ibis build dark
+/tmp/vendor/bin/ibis sample
+/tmp/vendor/bin/ibis sample dark
 
 # commit the new files
-git --global user.email 
+git config --global user.email 
 git remote set-url origin `https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git`
 git fetch
 git checkout ${branch}

@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@main
       with:
         fetch-depth: '0'
-    - name: Bump version and push tag
+    - name: Build Ibis Export Files
       uses: bobbyiliev/ibis-build-action@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
