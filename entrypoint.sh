@@ -20,7 +20,6 @@ cd ${ibis_path}
 
 # commit the new files
 git config --global user.email 
-git remote set-url origin `https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git`
 git fetch
 git checkout ${branch}
 git add export/
