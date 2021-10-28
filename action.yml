@@ -1,0 +1,12 @@
+name: 'Ibis Builds'
+description: 'Automatically build new eBook PDF files using Ibis'
+author: 'Bobby Iliev'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+outputs:
+  build:
+    description: 'Ibis build completed'
+branding:
+  icon: 'git-merge'  
+  color: 'purple'
