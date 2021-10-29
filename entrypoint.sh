@@ -13,10 +13,10 @@ commit_message=${COMMIT_MESSAGE:-Updated Ibis Exorted Files}
 
 # build the PDF
 cd ${ibis_path}
-/tmp/vendor/bin/ibis build
-/tmp/vendor/bin/ibis build dark
-/tmp/vendor/bin/ibis sample
-/tmp/vendor/bin/ibis sample dark
+php7 /tmp/vendor/bin/ibis build
+php7 /tmp/vendor/bin/ibis build dark
+php7 /tmp/vendor/bin/ibis sample
+php7 /tmp/vendor/bin/ibis sample dark
 
 # commit the new files
 git config --global user.email 
