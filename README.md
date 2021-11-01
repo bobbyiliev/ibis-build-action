@@ -43,7 +43,7 @@ jobs:
 ## Environment Variables
 
 * `GITHUB_TOKEN`: Required for permission to tag the repo. You can leave it as it is.
-* `IBIS_PATH`: The path to the Ibis init folder. By default it is `./` but if you have a custom location, make sure to udpate it
+* `IBIS_PATH`: The path to the Ibis init folder. By default it is `./` but if you have a custom location, make sure to update it
 * `IBIS_BRANCH`: The Branch that the Ibis exported files will be commited and pushed to. Default is `main`.
 * `EMAIL`: The email address that the commit will be associated with.
 * `COMMIT_MESSAGE`: The commit message.
