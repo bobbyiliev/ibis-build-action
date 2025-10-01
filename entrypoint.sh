@@ -9,17 +9,17 @@ branch=${IBIS_BRANCH:-main}
 # Email id used while committing to the repo
 email=${EMAIL:-bobby@bobbyiliev.com}
 # The commit message
-commit_message=${COMMIT_MESSAGE:-Updated Ibis Exorted Files}
+commit_message=${COMMIT_MESSAGE:-Updated Ibis Next Exported Files}
 
 # build the PDF
 cd ${ibis_path}
-php7 /tmp/vendor/bin/ibis build
-php7 /tmp/vendor/bin/ibis build dark
-php7 /tmp/vendor/bin/ibis sample
-php7 /tmp/vendor/bin/ibis sample dark
+php /tmp/vendor/bin/ibis-next pdf
+php /tmp/vendor/bin/ibis-next pdf dark
+php /tmp/vendor/bin/ibis-next sample
+php /tmp/vendor/bin/ibis-next sample dark
 
 # commit the new files
-git config --global user.email 
+git config --global user.email "${email}"
 git fetch
 git checkout ${branch}
 git add export/
