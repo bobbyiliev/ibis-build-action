@@ -1,12 +1,12 @@
-name: 'Ibis Builds'
-description: 'Automatically build new eBook PDF files using Ibis'
-author: 'Bobby Iliev'
+name: "Ibis Next Builds"
+description: "Automatically build new eBook PDF files using Ibis Next"
+author: "Bobby Iliev"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
 outputs:
   build:
-    description: 'Ibis build completed'
+    description: "Ibis Next build completed"
 branding:
-  icon: 'git-merge'  
-  color: 'purple'
+  icon: "git-merge"
+  color: "purple"
