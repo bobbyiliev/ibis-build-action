@@ -1,17 +1,12 @@
-FROM php:8.4-cli-alpine
-
+FROM composer:2.1.9
 LABEL "repository"="https://github.com/bobbyiliev/ibis-build-action"
 LABEL "homepage"="https://github.com/bobbyiliev/ibis-build-action"
 LABEL "maintainer"="Bobby Iliev"
 
-ENV COMPOSER_HOME=/tmp
-
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# Install PHP modules and Ibis Next
-RUN apk add --no-cache php8-iconv php8-mbstring php8-openssl php8-gd php8-zip git \
-    && composer global require hi-folks/ibis-next
+# Install PHP 7 and all required modules
+RUN apk add php7 php7-phar php7-iconv php7-mbstring php7-json php7-openssl php7-gd
+# Install Ibis
+RUN php7 /usr/bin/composer global require themsaid/ibis
 
 COPY entrypoint.sh /entrypoint.sh
 
